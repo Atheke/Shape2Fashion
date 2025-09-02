@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@300;500&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fira+Code:wght@300..700&family=Poppins:wght@300;500&family=Roboto:wght@400;700&display=swap');
+
+:root {
+   font-family: "Poppins" , sans-serif;
+   --font-mono: "Fira Code" , monospace;
+   color-scheme: dark;
+}
+
