@@ -5,14 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Body measurements</title>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-		<link rel="stylesheet" href="styles.css">
-    <script src="index.js" defer></script>
+		<link rel="stylesheet" href="index.css">
+		<script src="https://cdn.tailwindcss.com"></script>
+    	<script src="index.js" defer></script>
 		<script src="mediaDevice.js" defer></script>
+		<script src="https://kit.fontawesome.com/3cd5401aa0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Welcome to Body measurement site</h1>
+	<div class=" container min-h-screen min-w-full flex flex-col justify-center items-center gap-14"> 
+			
+		<a href="https://github.com/ShapeToFashion/Shape2Fashion"><header class= " font-extrabold text-4xl text-purple-400"> <i class="fa-brands fa-github"></i>
+				Shape2Fashion</header></a>
+
+			<div class = "container min-w-full flex flex-col items-center  gap-10">
+
+				<h1 class = "text-white font-semibold text-center text-5xl drop-shadow-xl px-2.5 py-2.5">Reccomending Fashion from Body Shapes</h1>
+				<div class = "flex justify-center gap-28 ">
+					
+					<label for="fileInput" class="cursor-pointer border-purple-500 px-6 py-3 border-2 rounded hover:bg-purple-500">
+						Upload File
+					  </label>
+					  <input type="file" id="fileInput" name="file" class="hidden"/>
+					<button class = "bg-purple-500 rounded px-6 py-3 font-extrabold hover:bg-gray-900 hover:border-purple-500 hover:border-2">Camera</button>
+				</div>
+			</div>
+
+			<div class = "h-3/4 w-3/5 rounded bg-black shadow-xl font-mono text-base px-10 py-10" >
+				<div><-----README.md----></div>
+				<div>Fashion is recommended based on body shapes.There are 5 body shape classifications Apple , Pear , Hourglass , Inverted Triangle and Apple </div>
+				<div>You can upload your image by capturing an image with your camera or uploading from your storage</div>
+				<div>There are 6 classes of item clothing select any number of options</div>
+				<div>Once your image is uploaded click the analyse button. You will be redirected to the recommendation page with your estimated body shape</div>
+			</div>
+
+		
+		
+		
+	</div>
+
+
+	<!-- section before usig tailwindcss -->
 	<div class="big">
-		<div class="container">
+		<div class="container2 hidden">
 			<div class="camera">
 				<video id="video">Video stream not available.</video>
 					  <button id="startbutton">Take photo</button>
@@ -21,15 +55,15 @@
 				  <div class="output">
 				  <img id="photo" alt="The screen capture will appear in this box." />
 				  </div>
-				  <div class="small">
+				<div class="hidden" >
 					<form method="POST" enctype="multipart/form-data" >
 						<div class="inputoutput">
 						To upload a picture 
 						<img id = "imgsrc" alt="no image" />
-						<div class="caption">image Src <input type="file" id="fileInput" name="file" /></div>
+						
 						
 				
-					</div>
+						</div>
 							
 					  <div class="caption">
 						<p>What do you want to wear:</p>
@@ -39,11 +73,11 @@
 						<label><input type="checkbox" name="wearType" value="pants"> pants</label>
 						<label><input type="checkbox" name="wearType" value="shoes"> skirt</label>
 						<label><input type="checkbox" name="wearType" value="bag"> Bag</label>
-					</div>
+						</div>
 								<button id = "analyse" type= "submit">Analyse</button>
-							</div>
-						</form>		
-				  </div>
+					</form>		
+				</div>
+		</div>
 			 
 
 	</div>
